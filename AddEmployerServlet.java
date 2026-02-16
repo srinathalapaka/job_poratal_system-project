@@ -13,10 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet("/AddEmployer")
 public class AddEmployerServlet extends HttpServlet {
-
-    /**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -31,10 +28,11 @@ public class AddEmployerServlet extends HttpServlet {
         try {
 			new EmployerDAO().addEmployer(emp);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
+			 
 			e.printStackTrace();
 		}
         response.sendRedirect("AdminDashboard.jsp");
     }
 }
+
 
