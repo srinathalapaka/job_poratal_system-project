@@ -13,9 +13,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/AddJobSeeker")
 public class AddJobSeekerServlet extends HttpServlet {
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -32,3 +29,4 @@ public class AddJobSeekerServlet extends HttpServlet {
         response.sendRedirect("AdminDashboard.jsp");
     }
 }
+
