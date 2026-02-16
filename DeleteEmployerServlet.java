@@ -12,9 +12,6 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet("/DeleteEmployer")
 public class DeleteEmployerServlet extends HttpServlet {
 
-    /**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
@@ -24,11 +21,11 @@ public class DeleteEmployerServlet extends HttpServlet {
         try {
 			new EmployerDAO().deleteEmployer(id);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
         response.sendRedirect("AdminDashboard.jsp");
     }
 }
+
 
